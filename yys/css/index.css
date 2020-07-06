@@ -1,0 +1,155 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-style: normal
+}
+body {
+    font-family: "Microsoft YaHei",simSun,"Lucida Grande","Lucida Sans Unicode",Arial;
+    line-height: 170%;
+    font-size: 12px;
+    color: #000;
+}
+html,body{
+    height: 100%;
+    background: #fff;
+}
+.big_box{
+    position: relative;
+    max-width: 1920px;
+    min-width: 1280px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul li{
+    list-style: none;
+    float: left;
+}
+
+.topbar{
+    height: 55px;
+}
+.topbar .t_left{
+    height: 55px;
+}
+.topbar .t_left li{
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    cursor: default;
+}
+.topbar .t_left .t_one{
+    width: 179px;
+    background-color: #cf1132;
+    color: white;
+}
+.topbar .t_left .caidan{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: .95;
+    z-index: 99;
+    background-color: tomato;
+}
+.topbar .t_left .t_one:hover+.topbar .t_left .caidan{
+    height: 500px;
+    /* transition: 2s; */
+}
+.topbar .t_left .t_one .t_dh{
+    display: inline-block;
+    width: 25px;
+    height: 11px;
+    background: url("../images/sprite-w_dd519f4.png") -90px -306px no-repeat;
+    margin-right: 8px;
+}
+.topbar .t_left .t_two{
+    margin-left: 1px;
+}
+.topbar .t_left .t_timg{
+    position: absolute;
+    top: 55px;
+    left: 179px;
+    display: none;
+    z-index: 9999;
+    cursor: pointer;
+}
+.topbar .t_left .t_two img:hover{
+    opacity: 0;
+}
+.topbar .t_left .t_two img:hover+.t_timg{
+    display: block;
+}
+.topbar .t_left .t_timg:hover{
+    display: block;
+}
+.topbar .t_left .t_three{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topbar .t_left .t_right{
+    float: right;
+    width: 138px;
+    height: 54px;
+    border-left: 1px solid #dadada;
+}
+.topbar .t_left .t_right:hover{
+    background-color: #F3F3F3;
+    color: #bc2e2e!important;
+    border-bottom: 1px solid #bc2e2e;
+    background-image: -webkit-linear-gradient(top,#F3F3F3 0,#FEFEFE 52px);
+}
+
+.section_header .nav{
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    background: url("../images/nav_back_bg_fd2505e.jpg") 0 0 no-repeat;
+    color: #fff;
+}
+.section_header ul{
+    display: flex;
+    width: 1180px;
+    height: 65px;
+    margin: 0 auto;
+}
+.section_header ul li{
+    width: 118px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    font-size: 18px;
+}
+.section_header ul li a{
+    text-decoration: none;
+    color: white;
+}

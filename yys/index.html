@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>
+        《阴阳师》手游官网_《阴阳师》情缘版_网易和风匠心巨制，开启唯美奇幻之旅
+    </title>
+    <link rel="icon" href="images/72.webp" sizes="32x32">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/vue.js"></script>
+    <!-- <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script> -->
+</head>
+<div class="big_box" id="big_box">
+    <!--  头部导航栏  -->
+    <div class="header">
+        <!--  头部顶条  -->
+        <div class="topbar">
+            <ul class="t_left">
+                <li class="t_one">
+                    <div><span class="t_dh"></span>游戏全目录</div>
+                </li>
+                <li class="t_two" style="opacity: 0;">
+                    <img src="images/h.jpg" alt="">
+                    <img class="t_timg" src="images/h2.jpg" alt="">
+                </li>
+                <li class="t_three"><img src="images/logo_b5525b7.png" alt=""></li>
+                <li class="t_right">25元专属券限时领！</li>
+                <div class="caidan"></div>
+            </ul>
+        </div>
+        <!--  导航栏  -->
+        <div class="section_header">
+            <!-- 导航 -->
+            <div class="nav">
+                <ul>
+                    <li v-for='nav in navList' :key="nav.id" :title="nav.name"><a :href="nav.url">{{nav.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+
+    </div>
+    <div class="foot">
+
+    </div>
+
+</div>
+
+<body>
+    <script>
+        var vm = new Vue({
+            el: '#big_box',
+            data: {
+                navList: ''
+            },
+            created: function () {
+                // console.log(1)
+                this.navlist()
+            },
+            methods: {
+                navlist: function () {
+                    fetch('json/caidan.json').then(res => res.json()).then(res => {
+                        console.log(res)
+                        this.navList = res
+                    })
+
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
